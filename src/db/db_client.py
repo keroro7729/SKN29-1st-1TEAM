@@ -3,7 +3,7 @@ from mysql.connector import Error
 import dotenv
 import os
 
-class Repo:
+class Client:
     def __init__(self):
         dotenv.load_dotenv()
         self.DB_CONFIG = {
@@ -25,7 +25,9 @@ class Repo:
         cursor = self._get_cursor()
         try:
             cursor.execute(query, params)
-            return cursor.fetchall()
+            columns = [col[0] for col in cursor.description]
+            rows = cursor.fetchall()
+            return columns, rows
         except Error as e:
             print(f"[Error] Failed to select: query={query}, params={params}")
             raise RuntimeError(e)
@@ -50,7 +52,7 @@ class Repo:
         try:
             cursor.execute(query, params)
             self._commit()
-            return cursor._last_insert_id
+            return cursor.lastrowid
         except Error as e:
             self._rollback()
             print(f"[Error] Failed to insert: query={query}, params={params}")

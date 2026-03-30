@@ -28,7 +28,7 @@
 
 
 <p align="center">
-  <img src="<img width="1408" height="768" alt="Image" src="https://github.com/user-attachments/assets/a555f545-6001-4a06-9044-4576a5f6f03c" />" width="80%" alt="Database ERD">
+  <img src="<img width="1408" height="768" alt="Image" src="https://github.com/user-attachments/assets/a555f545-6001-4a06-9044-4576a5f6f03c" />
 </p>
 
 

@@ -16,18 +16,14 @@
   <img src="https://img.shields.io/badge/LICENSE-MIT-64748B?style=for-the-badge" alt="license" />
 </p>
 
-<p>
-  <b>Urban road data, clearly visualized.</b><br />
-  복잡한 도로 정보를 더 직관적이고 구조적인 가이드 경험으로 전환합니다.
-</p>
+**인천광역시 도로교통 가이드**는
+인천광역시 도로 공공 데이터를 활용하여 **교통 흐름과 위험 요인을 분석**하고 **개선이 필요한 도로 및 정책 인사이트 도출**을 목표로 합니다
 
-<p>
-  <a href="#-project-route">Project Route</a> •
-  <a href="#-key-signals">Key Signals</a> •
-  <a href="#️-visualization-preview">Preview</a> •
-  <a href="#️-tech-stack">Tech Stack</a> •
-  <a href="#-quick-start">Quick Start</a>
-</p>
+- 💡 핵심 질문
+  - 언제, 어떤 조건에서 교통 패턴이 달라지는가?
+  - 사고 발생에 영향을 주는 요인은 무엇인가?
+  - 인천공항으로 향하는 주요 흐름은 어떻게 구성되는가?
+  - 운전자에게 스트레스를 유발하는 도로는 어디인가?
 
 </div>
 
@@ -36,41 +32,29 @@
 ## 📍 Project Route
 
 **인천광역시 도로교통 가이드**는
-인천광역시의 도로 데이터를 보다 쉽게 탐색하고 이해할 수 있도록  
-지도 기반 인터페이스와 가이드 중심의 시각화를 결합한 프로젝트입니다.
+인천광역시 도로 공공 데이터를 활용하여 **교통 흐름과 위험 요인을 분석**하고 **개선이 필요한 도로 및 정책 인사이트 도출**을 목표로 합니다
 
-이 프로젝트는 단순히 지도를 보여주는 데 그치지 않고,  
-사용자가 **다양한 요인별 교통흐름 변화**, **인천공항으로의 교통 흐름**, **운전자 스트레스 지수가 높은 개선필요한 도로**를 빠르게 파악할 수 있도록 설계되었습니다.
-
-> **도시 인프라 데이터**를  
-> **읽기 쉬운 길 안내 경험**으로 바꾸는 것이 이 프로젝트의 핵심 목표입니다.
+| 분석 주제 | 설명 |
+|----------|------|
+| 패턴 분석 | 요일/시간/날씨별 교통 패턴 |
+| 사고 분석 | 사고량과 영향 요인 상관관계 |
+| 공항 흐름 | 인천공항 유입 경로 분석 |
+| 스트레스 지수 | 운전자 스트레스 기반 도로 평가 |
 
 ---
 
 ## 🚦 Key Signals
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <h3>🗺️ 요일별, 시간대별, 날씨별 교통흐름</h3>
-      <p>
-        주요 도로들의 여러 요인별 교통흐름 변화를 한 눈에 확인할 수 있습니다
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h3>📌 인천공항으로의 교통 흐름</h3>
-      <p>
-        인천으로 가는 도로중 흐름의 큰 부분인 인천공항으로의 교통흐름 데이터를 중점적으로 볼 수 있습니다
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h3>🏙️ 운전자 스트레스 지수가 높은 개선필요한 도로</h3>
-      <p>
-        교통량, 도로 내 위험요인, 도로 내 속도 데이터를 이용해 개선이 필요한 도로를 알려드립니다
-      </p>
-    </td>
-  </tr>
-</table>
+- 📈 주요 인사이트
+  - 특정 시간대 + 날씨 조건에서 교통량 급증
+  - 사고 발생은 단순 교통량보다 **특정 변수와 높은 상관성**
+  - 공항으로의 이동은 특정 축(도로)에 집중됨
+  - 일부 도로는 구조적으로 높은 스트레스 유발
+
+- 🎯 활용 가능성
+  - 교통 정책 개선
+  - 사고 예방 전략 수립
+  - 도로 설계 및 신호 체계 개선
 
 ---
 
@@ -86,39 +70,6 @@
 | **레이어 기반 정보 제공** | 필요한 데이터만 선택적으로 확인 가능 |
 | **공공데이터 활용** | 실제 도시 정보 기반의 시각화 프로젝트 |
 
-</div>
-
----
-
-## 🖥️ Visualization Preview
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <img src="./assets/preview-main.png" alt="메인 지도 화면" width="100%" />
-        <br />
-        <sub><b>Main Dashboard View</b><br />메인 지도 화면</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="./assets/preview-route.png" alt="주요 도로 구간 강조 화면" width="100%" />
-        <br />
-        <sub><b>Highlighted Route View</b><br />주요 도로 구간 강조 시각화</sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <img src="./assets/preview-district.png" alt="행정구역 기반 탐색 화면" width="100%" />
-        <br />
-        <sub><b>District Navigation</b><br />행정구역 기반 탐색 인터페이스</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="./assets/preview-layer.png" alt="레이어 및 정보 패널 화면" width="100%" />
-        <br />
-        <sub><b>Layer & Info Panel</b><br />데이터 레이어 및 정보 패널</sub>
-      </td>
-    </tr>
-  </table>
 </div>
 
 ---
@@ -235,59 +186,13 @@ See the LICENSE file for more details.
 🚦 Built for clearer road understanding in Incheon
 도시의 길을 읽기 쉬운 정보로 바꾸는 시각화 프로젝트
 
+EADME 전체에서 보통 이 위치가 제일 예쁩니다.
 
-🔝 Back to Top
-
-```
-이 버전이 더 고급스러운 이유
-이 템플릿은 그냥 예쁜 README가 아니라,
-**“프로젝트 랜딩 페이지를 README 안에 축소해 넣은 느낌”**으로 보이게 구성했어요.
-
-특히 아래 요소들이 고급스럽게 보이게 만듭니다.
-
-1. Hero가 단순 제목이 아니라 브랜딩처럼 보임
-배너
-배지
-슬로건
-바로가기 링크
-이 네 개가 들어가면 첫인상이 확 달라집니다.
-
-2. 카드형/대시보드형 섹션 구조
-Key Signals, Service Highlights, Project Goals 같은 섹션은
-평범한 문서보다 훨씬 제품 소개 페이지처럼 보입니다.
-
-3. <details>로 정보 밀도 조절
-README가 너무 길어 보이지 않으면서도
-필요한 정보는 접었다 펼 수 있게 해서 완성도가 높아집니다.
-
-4. 이미지 프리뷰가 “작품”처럼 보임
-스크린샷만 넣는 게 아니라
-각 화면에 이름과 설명을 붙여서 포트폴리오 톤을 강화했습니다.
-
-5. Mermaid로 시스템 구조까지 시각화
-텍스트 설명만 있는 것보다
-“생각하고 만든 프로젝트”처럼 보입니다.
-
-더 세련되게 보이게 하는 실전 팁
-배너 문구는 이렇게 추천
-배너 안에는 너무 많은 문구보다 아래 둘 중 하나가 좋아요.
-
-옵션 A
-Incheon Road Guide Visualization
-Urban road data, clearly visualized.
-
-옵션 B
-Smart City Dashboard for Incheon Roads
-Guiding urban roads through data and design.
-
-assets 폴더는 꼭 정리
-이름이 정리돼 있으면 README 완성도가 올라갑니다.
-
-Copyassets/
-├─ banner.png
-├─ preview-main.png
-├─ preview-route.png
-├─ preview-district.png
-└─ preview-layer.png
-배지는 4~5개 정도만
-너무 많으면 오히려 촌스러워집니다.
+Hero
+Project Route
+Key Signals
+Visualization Preview
+Team Route
+Tech Stack
+Data Route
+Quick Start

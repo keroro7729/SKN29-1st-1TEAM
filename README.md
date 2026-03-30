@@ -77,7 +77,7 @@
 
 > 데이터 구조
 
-![ERD]<img width="958" height="1127" alt="Image" src="https://github.com/user-attachments/assets/a8525877-28e9-4cbc-88c1-e53c29a7134d" />
+<img width="958" height="1127" alt="Image" src="https://github.com/user-attachments/assets/a8525877-28e9-4cbc-88c1-e53c29a7134d" />
 
 ---
 

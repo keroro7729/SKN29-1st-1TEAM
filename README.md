@@ -19,9 +19,9 @@
 
 ## 📝 프로젝트 소개
 
-> [cite_start]**인천광역시 도로 공공 데이터를 활용하여 교통 흐름과 위험 요인을 분석하고, 개선이 필요한 도로 및 정책 인사이트 도출을 목표로 합니다. **
+> **인천광역시 도로 공공 데이터를 활용하여 교통 흐름과 위험 요인을 분석하고, 개선이 필요한 도로 및 정책 인사이트 도출을 목표로 합니다. **
 
-### [cite_start]📈 주요 인사이트 
+### 📈 주요 인사이트 
 * **기상 상관성**: 특정 시간대와 날씨 조건이 결합될 때 교통량이 급격히 변동함 
 * **사고 분석**: 사고 발생은 단순 교통량보다 특정 변수(위험 요소 등)와 더 높은 상관성을 보임 
 * **흐름 집중**: 인천공항으로의 이동 흐름이 특정 주요 도로 축에 집중되는 경향 확인 
@@ -46,14 +46,14 @@
   <img src="https://github.com/user-attachments/assets/3443ccbb-e8af-4dd8-802b-489180a0384a" width="90%" alt="Database ERD">
 </p>
 
-### [cite_start]**📌 Schema Highlights** 
+### **📌 Schema Highlights** 
 * **Master Table**: `pp_road` 테이블을 중심으로 모든 교통 지표를 1:N 관계로 매핑하여 통합 관리함 
 * **Normalization**: `road_info` 테이블로 도로의 물리적 특성을 분리하여 데이터 중복을 최소화함 
 * **Optimization**: `datetime` 및 `road_id` 인덱싱 설계를 통해 대용량 로그 데이터 조회 성능을 최적화함 
 
 ---
 
-## [cite_start]🚀 수행 절차 및 구조 
+## 🚀 수행 절차 및 구조 
 
 1. **Data Ingestion**: 인천시 공공데이터 포털 및 기상청 API를 통해 원천 데이터를 수집함 
 2. **Data Normalization**: `link_id`와 `road_name`을 기준으로 엔티티 간 외래 키(FK) 관계를 설정함 

@@ -1,4 +1,4 @@
-<h1> 🚙 Incheon Traffic Insight: 자동차 등록 통계와 교통 패턴의 결합 🚚 </h1>
+<h1> 🚙 Incheon Traffic Insight: 자동차 통계와 교통 흐름이 만나는 패턴 가이드 🚚 </h1>
 
 <br>
 

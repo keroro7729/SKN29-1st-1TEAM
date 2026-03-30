@@ -1,24 +1,33 @@
 <div align="center">
 
+<img src="./assets/banner.png" alt="Incheon Road Guide Visualization Banner" width="100%" />
+
+<br />
+
 # 🛣️ Incheon Road Guide Visualization
 
-### 인천광역시 도로 정보를 더 직관적으로 탐색하고 이해할 수 있도록 설계한 스마트시티형 시각화 프로젝트
+### 도시의 길을 데이터로 읽고, 시각으로 안내하는 인천광역시 도로 가이드 프로젝트
 
-<br>
+<p>
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-22C55E?style=for-the-badge" alt="status" />
+  <img src="https://img.shields.io/badge/FRONTEND-React%20%7C%20Vue-0EA5E9?style=for-the-badge" alt="frontend" />
+  <img src="https://img.shields.io/badge/MAP-Leaflet%20%7C%20Mapbox-1D4ED8?style=for-the-badge" alt="map" />
+  <img src="https://img.shields.io/badge/DATA-Public%20Data-FACC15?style=for-the-badge" alt="data" />
+  <img src="https://img.shields.io/badge/LICENSE-MIT-64748B?style=for-the-badge" alt="license" />
+</p>
 
-![Status](https://img.shields.io/badge/status-active-22C55E?style=for-the-badge)
-![Made with](https://img.shields.io/badge/made%20with-[사용기술]-0EA5E9?style=for-the-badge)
-![Data](https://img.shields.io/badge/data-public%20data-FACC15?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-64748B?style=for-the-badge)
+<p>
+  <b>Urban road data, clearly visualized.</b><br />
+  복잡한 도로 정보를 더 직관적이고 구조적인 가이드 경험으로 전환합니다.
+</p>
 
-<br>
-
-> **Visualizing the roads of Incheon, clearly and intuitively**  
-> 도시의 길을 더 명확하게, 인천광역시 도로 가이드 시각화 프로젝트
-
-<br>
-
-![banner](./assets/banner.png)
+<p>
+  <a href="#-project-route">Project Route</a> •
+  <a href="#-key-signals">Key Signals</a> •
+  <a href="#️-visualization-preview">Preview</a> •
+  <a href="#️-tech-stack">Tech Stack</a> •
+  <a href="#-quick-start">Quick Start</a>
+</p>
 
 </div>
 
@@ -27,12 +36,14 @@
 ## 📍 Project Route
 
 **Incheon Road Guide Visualization**은  
-인천광역시의 도로 정보를 보다 쉽게 탐색하고 이해할 수 있도록  
-지도 기반 인터페이스와 시각화 요소를 활용해 구성한 프로젝트입니다.
+인천광역시의 도로 데이터를 보다 쉽게 탐색하고 이해할 수 있도록  
+지도 기반 인터페이스와 가이드 중심의 시각화를 결합한 프로젝트입니다.
 
-복잡한 도로 구조와 주요 구간, 행정구역 또는 노선 중심의 정보를  
-직관적인 방식으로 전달하는 것을 목표로 합니다.  
-단순한 지도 표시를 넘어, 사용자가 **도로 흐름과 위치 관계를 빠르게 파악할 수 있는 가이드형 시각화 경험**을 제공합니다.
+이 프로젝트는 단순히 지도를 보여주는 데 그치지 않고,  
+사용자가 **도로의 흐름**, **지역 간 연결 구조**, **주요 구간의 맥락**을 빠르게 파악할 수 있도록 설계되었습니다.
+
+> **도시 인프라 데이터**를  
+> **읽기 쉬운 길 안내 경험**으로 바꾸는 것이 이 프로젝트의 핵심 목표입니다.
 
 ---
 
@@ -40,79 +51,246 @@
 
 <table>
   <tr>
-    <td width="33%">
+    <td width="33%" valign="top">
       <h3>🗺️ Road Visualization</h3>
-      <p>도로 구간, 주요 노선, 행정구역 정보를 시각적으로 표현하여 빠른 이해를 돕습니다.</p>
+      <p>
+        주요 도로와 구간을 시각적으로 강조하여 복잡한 도시 도로망을
+        더 명확하게 탐색할 수 있도록 구성했습니다.
+      </p>
     </td>
-    <td width="33%">
+    <td width="33%" valign="top">
       <h3>📌 Guide-Oriented UI</h3>
-      <p>교통안내판과 경로 가이드에서 영감을 받은 인터페이스로 정보 탐색 흐름을 단순화했습니다.</p>
+      <p>
+        교통안내판과 경로 가이드에서 영감을 받은 인터페이스로
+        사용자의 정보 탐색 흐름을 직관적으로 만듭니다.
+      </p>
     </td>
-    <td width="33%">
-      <h3>🏙️ Smart City Perspective</h3>
-      <p>도시 인프라와 공공데이터를 연결해 인천광역시 도로 체계를 디지털 대시보드처럼 보여줍니다.</p>
+    <td width="33%" valign="top">
+      <h3>🏙️ Smart City Dashboard</h3>
+      <p>
+        공공데이터와 지도 시각화를 연결해
+        인천광역시 도로 체계를 도시 인프라 대시보드처럼 보여줍니다.
+      </p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🧭 Why This Project
+## 🧭 Service Highlights
 
-이 프로젝트는 다음과 같은 문제의식에서 출발했습니다.
+<div align="center">
 
-- 도로 정보는 많지만, 한눈에 이해하기 어려운 경우가 많습니다.
-- 지도 데이터는 존재하지만, 사용자가 빠르게 길의 구조와 특징을 파악하기엔 불친절할 수 있습니다.
-- 공공데이터와 시각화 기술을 결합하면 도시 이동 정보를 더 직관적으로 전달할 수 있습니다.
+| Feature | Description |
+|---|---|
+| **도로 구간 시각화** | 주요 도로와 연결 구간을 구조적으로 표현 |
+| **행정구역 기반 탐색** | 지역 단위로 도로 정보를 구분해 탐색 가능 |
+| **가이드형 인터페이스** | 사용자가 길의 흐름을 자연스럽게 읽을 수 있는 UI |
+| **레이어 기반 정보 제공** | 필요한 데이터만 선택적으로 확인 가능 |
+| **공공데이터 활용** | 실제 도시 정보 기반의 시각화 프로젝트 |
 
-그래서 본 프로젝트는  
-**“데이터를 보여주는 지도”**가 아니라,  
-**“길을 읽게 해주는 가이드”**를 만드는 데 초점을 맞췄습니다.
+</div>
 
 ---
 
 ## 🖥️ Visualization Preview
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./assets/preview-main.png" width="100%" alt="main preview" />
-      <br />
-      <sub>메인 지도 화면</sub>
-    </td>
-    <td align="center">
-      <img src="./assets/preview-route.png" width="100%" alt="route preview" />
-      <br />
-      <sub>주요 도로 구간 강조 시각화</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="./assets/preview-district.png" width="100%" alt="district preview" />
-      <br />
-      <sub>행정구역 기반 탐색 화면</sub>
-    </td>
-    <td align="center">
-      <img src="./assets/preview-layer.png" width="100%" alt="layer preview" />
-      <br />
-      <sub>데이터 레이어 및 정보 패널</sub>
-    </td>
-  </tr>
-</table>
-
-> 실제 화면 캡처가 아직 없다면, 우선 목업 이미지나 지도 일부 캡처로 채워두는 것도 좋습니다.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img src="./assets/preview-main.png" alt="메인 지도 화면" width="100%" />
+        <br />
+        <sub><b>Main Dashboard View</b><br />메인 지도 화면</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="./assets/preview-route.png" alt="주요 도로 구간 강조 화면" width="100%" />
+        <br />
+        <sub><b>Highlighted Route View</b><br />주요 도로 구간 강조 시각화</sub>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+        <img src="./assets/preview-district.png" alt="행정구역 기반 탐색 화면" width="100%" />
+        <br />
+        <sub><b>District Navigation</b><br />행정구역 기반 탐색 인터페이스</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="./assets/preview-layer.png" alt="레이어 및 정보 패널 화면" width="100%" />
+        <br />
+        <sub><b>Layer & Info Panel</b><br />데이터 레이어 및 정보 패널</sub>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
 ## 🏗️ System Overview
 
-```text
-[Public Data / Geo Data]
-          ↓
-   [Data Processing]
-          ↓
- [Map Rendering Engine]
-          ↓
- [Guide Visualization UI]
-          ↓
-   [User Interaction]
+```mermaid
+flowchart LR
+    A[Public Data / Geo Data] --> B[Data Processing]
+    B --> C[Map Rendering Engine]
+    C --> D[Guide Visualization UI]
+    D --> E[User Interaction]
+
+프로젝트는 도로 및 위치 기반 데이터를 정제한 뒤,
+지도 렌더링과 UI 레이어를 통해 사용자에게
+가이드 중심의 시각적 탐색 경험을 제공합니다.
+
+🧩 Information Architecture
+Input Data
+도로 구간 데이터
+행정구역 경계 데이터
+좌표 및 지오메트리 정보
+부가 속성 정보
+Output Experience
+도로 흐름 파악
+지역별 탐색
+레이어 기반 정보 확인
+직관적인 시각 가이드
+⚙️ Tech Stack
+Category	Stack
+Frontend	React / Vue / Next.js
+Language	TypeScript / JavaScript
+Map	Leaflet / Mapbox / OpenLayers
+Visualization	D3.js / deck.gl / Custom Layer
+Data Format	GeoJSON / CSV / Open API
+Styling	Tailwind CSS / SCSS / Styled Components
+사용 중인 실제 기술만 남기고 나머지는 지우면 됩니다.
+
+🗂️ Data Route
+이 프로젝트는 인천광역시 도로 정보를 보다 쉽게 읽을 수 있도록
+다양한 위치·속성 데이터를 시각화 가능한 형태로 가공해 사용합니다.
+
+Data Type	Description
+Road Data	인천광역시 도로 구간, 노선, 위치 정보
+District Data	구/군/동 단위의 행정구역 경계 정보
+Coordinate Data	지도 렌더링 및 레이어 표현에 필요한 좌표 데이터
+Metadata	안내용 텍스트, 속성 정보, 분류 기준 등
+데이터 처리 방식 보기
+🚏 Main Features
+1. 도로 정보 시각화
+주요 도로와 연결 구간을 시각적으로 강조하여
+복잡한 도로 구조를 한눈에 이해할 수 있도록 합니다.
+
+2. 가이드형 인터페이스
+사용자가 단순히 지도를 보는 것이 아니라
+길의 흐름을 읽고 따라갈 수 있도록 UI를 설계했습니다.
+
+3. 행정구역 기반 탐색
+행정구역 단위로 정보를 구분해
+지역별 도로 맥락을 더 쉽게 이해할 수 있습니다.
+
+4. 레이어 및 정보 패널
+필요한 정보만 선택적으로 확인할 수 있도록
+레이어 기반 인터랙션과 정보 패널을 제공합니다.
+
+🧱 Folder Structure
+Copysrc/
+├─ components/      # 공통 UI 컴포넌트
+├─ pages/           # 페이지 단위 화면
+├─ map/             # 지도 렌더링 관련 로직
+├─ data/            # 원천 데이터 및 가공 데이터
+├─ hooks/           # 커스텀 훅
+├─ utils/           # 공통 유틸 함수
+└─ styles/          # 전역 및 컴포넌트 스타일
+
+assets/
+├─ banner.png
+├─ preview-main.png
+├─ preview-route.png
+├─ preview-district.png
+└─ preview-layer.png
+🚀 Quick Start
+Copy# repository clone
+git clone [YOUR_REPOSITORY_URL]
+
+# move directory
+cd [PROJECT_FOLDER_NAME]
+
+# install dependencies
+npm install
+
+# run development server
+npm run dev
+📌 Project Goals
+Goal	Description
+Clarity	복잡한 도로 정보를 더 읽기 쉬운 형태로 제공
+Structure	도로와 지역의 관계를 구조적으로 표현
+Usability	누구나 직관적으로 탐색 가능한 인터페이스 설계
+Scalability	향후 실시간 데이터 및 기능 확장 가능성 고려
+🛣️ Next Route
+향후 확장 계획 보기
+👨‍💻 Contribution
+프로젝트에 대한 피드백, 개선 제안, PR은 언제든 환영합니다.
+
+Copy1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
+📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
+🚦 Built for clearer road understanding in Incheon
+도시의 길을 읽기 쉬운 정보로 바꾸는 시각화 프로젝트
+
+
+🔝 Back to Top
+
+```
+이 버전이 더 고급스러운 이유
+이 템플릿은 그냥 예쁜 README가 아니라,
+**“프로젝트 랜딩 페이지를 README 안에 축소해 넣은 느낌”**으로 보이게 구성했어요.
+
+특히 아래 요소들이 고급스럽게 보이게 만듭니다.
+
+1. Hero가 단순 제목이 아니라 브랜딩처럼 보임
+배너
+배지
+슬로건
+바로가기 링크
+이 네 개가 들어가면 첫인상이 확 달라집니다.
+
+2. 카드형/대시보드형 섹션 구조
+Key Signals, Service Highlights, Project Goals 같은 섹션은
+평범한 문서보다 훨씬 제품 소개 페이지처럼 보입니다.
+
+3. <details>로 정보 밀도 조절
+README가 너무 길어 보이지 않으면서도
+필요한 정보는 접었다 펼 수 있게 해서 완성도가 높아집니다.
+
+4. 이미지 프리뷰가 “작품”처럼 보임
+스크린샷만 넣는 게 아니라
+각 화면에 이름과 설명을 붙여서 포트폴리오 톤을 강화했습니다.
+
+5. Mermaid로 시스템 구조까지 시각화
+텍스트 설명만 있는 것보다
+“생각하고 만든 프로젝트”처럼 보입니다.
+
+더 세련되게 보이게 하는 실전 팁
+배너 문구는 이렇게 추천
+배너 안에는 너무 많은 문구보다 아래 둘 중 하나가 좋아요.
+
+옵션 A
+Incheon Road Guide Visualization
+Urban road data, clearly visualized.
+
+옵션 B
+Smart City Dashboard for Incheon Roads
+Guiding urban roads through data and design.
+
+assets 폴더는 꼭 정리
+이름이 정리돼 있으면 README 완성도가 올라갑니다.
+
+Copyassets/
+├─ banner.png
+├─ preview-main.png
+├─ preview-route.png
+├─ preview-district.png
+└─ preview-layer.png
+배지는 4~5개 정도만
+너무 많으면 오히려 촌스러워집니다.

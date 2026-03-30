@@ -6,7 +6,7 @@
 
 # 🛣️ 인천광역시 도로교통 가이드
 
-### 도시의 길을 데이터로 읽고, 시각으로 안내하는 인천광역시 도로 가이드 프로젝트
+### 데이터로 도로를 읽고, 문제를 찾아낸다
 
 <p>
   <img src="https://img.shields.io/badge/STATUS-ACTIVE-22C55E?style=for-the-badge" alt="status" />
@@ -29,10 +29,23 @@
 
 ---
 
-## 📍 Project Route
+## 🛠 Tech Stack
 
-**인천광역시 도로교통 가이드**는
-인천광역시 도로 공공 데이터를 활용하여 **교통 흐름과 위험 요인을 분석**하고 **개선이 필요한 도로 및 정책 인사이트 도출**을 목표로 합니다
+### 💻 Language & Data
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+### 🗄 Database
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+### 📊 Visualization / App
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
+### ⚙️ Tools
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+## 📍 Project Route
 
 | 분석 주제 | 설명 |
 |----------|------|
@@ -188,9 +201,6 @@ See the LICENSE file for more details.
 
 EADME 전체에서 보통 이 위치가 제일 예쁩니다.
 
-Hero
-Project Route
-Key Signals
 Visualization Preview
 Team Route
 Tech Stack

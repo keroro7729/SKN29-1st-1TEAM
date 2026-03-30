@@ -103,6 +103,8 @@
 
 ## 👥 Team Route
 
+<img width="1408" height="768" alt="Image" src="https://github.com/user-attachments/assets/289160b5-c928-49a7-81ab-8ccc4b3aaeba" />
+
 > 역할 분담
 
 | 이름 | 역할 | 담당 |

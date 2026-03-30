@@ -77,7 +77,7 @@
 
 > 데이터 구조
 
-![ERD]([./assets/erd.png](https://github.com/keroro7729/SKN29-1st-1TEAM/issues/1))
+![ERD](https://github.com/keroro7729/SKN29-1st-1TEAM/issues/1)
 
 ---
 

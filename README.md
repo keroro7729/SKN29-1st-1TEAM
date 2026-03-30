@@ -34,10 +34,10 @@
 
 | 이름 | 역할 | 상세 업무 |
 | :---: | :---: | :--- |
-| **김은진** | **Data Engineering** | [cite_start]크리에이티브 디자이너, 운전자 스트레스 지수[cite: 5] |
-| **김진욱** | **Data Analysis** | [cite_start]총괄 DB 설계, 인천공항으로의 흐름 분석[cite: 5] |
-| **이동윤** | **Backend/UI** | [cite_start]프론트앤드 개발자, 사고량과의 상관관계 영향도 분석[cite: 5] |
-| **이지현** | **Backend/UI** | [cite_start]데이터 수집, 요일별/ 시간대별/ 날씨별 도로 분석 패턴[cite: 5] |
+| **김은진** | **Designer** | [cite_start] 크리에이티브 디자이너, 운전자 스트레스 지수 [cite: 5] |
+| **김진욱** | **Project Lead** | [cite_start] 총괄 DB 설계, 인천공항으로의 흐름 분석 [cite: 5] |
+| **이동윤** | **Frontend** | [cite_start] 프론트앤드 개발자, 사고량과의 상관관계 영향도 분석 [cite: 5] |
+| **이지현** | **Data Analysis** | [cite_start] 데이터 수집, 요일별/ 시간대별/ 날씨별 도로 분석 패턴 [cite: 5] |
 
 
 

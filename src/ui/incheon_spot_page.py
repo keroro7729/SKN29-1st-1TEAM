@@ -4,11 +4,27 @@ from __future__ import annotations
 
 import streamlit as st
 
+from ui.cache import cache_data
 from service.incheon_spot_service import (
     get_by_district,
     get_summary_kpis,
     get_top_spots,
 )
+
+
+@cache_data
+def _cached_summary_kpis():
+    return get_summary_kpis()
+
+
+@cache_data
+def _cached_by_district(kind: str):
+    return get_by_district(kind=kind)
+
+
+@cache_data
+def _cached_top_spots(kind: str, limit: int):
+    return get_top_spots(kind=kind, limit=limit)
 
 
 def render_incheon_spot_page(start, end, road_name: str) -> None:
@@ -20,7 +36,7 @@ def render_incheon_spot_page(start, end, road_name: str) -> None:
     )
 
     try:
-        kpi = get_summary_kpis()
+        kpi = _cached_summary_kpis()
     except Exception:
         st.error("데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
         return
@@ -60,8 +76,8 @@ def render_incheon_spot_page(start, end, road_name: str) -> None:
     with tab1:
         c1, c2 = st.columns(2)
         try:
-            d_a = get_by_district(kind="accidents")
-            d_t = get_by_district(kind="truck")
+            d_a = _cached_by_district("accidents")
+            d_t = _cached_by_district("truck")
         except Exception:
             st.error("데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
             return
@@ -83,8 +99,8 @@ def render_incheon_spot_page(start, end, road_name: str) -> None:
     with tab2:
         c1, c2 = st.columns(2)
         try:
-            s_a = get_top_spots(kind="accidents", limit=20)
-            s_t = get_top_spots(kind="truck", limit=20)
+            s_a = _cached_top_spots("accidents", 20)
+            s_t = _cached_top_spots("truck", 20)
         except Exception:
             st.error("데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
             return

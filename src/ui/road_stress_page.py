@@ -5,6 +5,12 @@ from __future__ import annotations
 import streamlit as st
 
 from service.stress_index_service import compute_road_stress
+from ui.cache import cache_data
+
+
+@cache_data
+def _cached_road_stress(start, end, road_name: str):
+    return compute_road_stress(start, end, road_name)
 
 
 def render_road_stress_page(start, end, road_name: str) -> None:
@@ -17,9 +23,9 @@ def render_road_stress_page(start, end, road_name: str) -> None:
     top_n = st.slider("Top N", min_value=5, max_value=50, value=15, step=5)
 
     try:
-        res = compute_road_stress(start, end, road_name)
+        res = _cached_road_stress(start, end, road_name)
         df = res.roads
-    except Exception as e:
+    except Exception:
         st.error("데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
         return
 

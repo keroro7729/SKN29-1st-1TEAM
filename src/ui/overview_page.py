@@ -5,6 +5,7 @@ from __future__ import annotations
 import streamlit as st
 
 from service.koroad_live_kpi_service import LiveRoadKpi, get_live_road_kpi
+from ui.cache import cache_data
 
 
 def _fmt_speed(v: float | None) -> str:
@@ -35,7 +36,7 @@ def _delta_vol_delta(prev: float | None, avg: float | None) -> str | None:
     return f"{sign}{d:.0f}"
 
 
-@st.cache_data(ttl=120)
+@cache_data
 def _cached_live_kpi(road_name: str) -> LiveRoadKpi:
     return get_live_road_kpi(road_name=road_name, ymd=None)
 

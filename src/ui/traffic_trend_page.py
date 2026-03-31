@@ -5,16 +5,21 @@ from __future__ import annotations
 import streamlit as st
 
 from service.traffic_service import get_dow_hour_pattern
+from ui.cache import cache_data
+
+
+@cache_data
+def _cached_dow_hour_pattern(start, end, road_name: str):
+    return get_dow_hour_pattern(start, end, road_name)
 
 
 def render_traffic_trend_page(start, end, road_name: str) -> None:
     st.subheader("시간대 교통 패턴")
     st.caption("요일별·시간대별 교통량/속도 패턴")
 
-    pattern = None
     try:
-        pattern = get_dow_hour_pattern(start, end, road_name)
-    except Exception as e:
+        pattern = _cached_dow_hour_pattern(start, end, road_name)
+    except Exception:
         st.error("데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")
         return
 

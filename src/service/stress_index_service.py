@@ -17,6 +17,7 @@ from datetime import date, datetime, time, timedelta
 import pandas as pd
 
 from db.db_client import Client
+from db.queries import stress as q_stress
 
 
 def _to_dt_range(start: date, end: date) -> tuple[datetime, datetime]:
@@ -50,29 +51,11 @@ def compute_road_stress(
     start_dt, end_exclusive = _to_dt_range(start, end)
     client = Client()
 
-    # 1) PP_traffic·pp_speed 조인 결과 (volume, speed)
-    #    - NULL 제거: volume/speed 둘 다 있는 값만 사용
-    base = """
-        SELECT
-            r.road_name AS road_name,
-            t.datetime AS dt,
-            t.volume AS volume,
-            s.speed AS speed
-        FROM PP_traffic t
-        JOIN pp_road r
-          ON r.road_id = t.road_id
-        JOIN pp_speed s
-          ON s.road_id = t.road_id
-         AND s.direction = t.direction
-         AND s.datetime = t.datetime
-        WHERE t.datetime >= %s
-          AND t.datetime < %s
-          AND t.volume IS NOT NULL
-          AND s.speed IS NOT NULL
-          AND (%s = '전체' OR r.road_name = %s)
-    """
-    params = (start_dt, end_exclusive, road_name, road_name)
-    cols, rows = client.select(base, params)
+    query = q_stress.base_volume_speed_join()
+    params = q_stress.base_volume_speed_join_params(
+        start_dt=start_dt, end_exclusive=end_exclusive, road_name=road_name
+    )
+    cols, rows = client.select(query, params)
     df = pd.DataFrame(rows, columns=cols)
     if df.empty:
         return RoadStressResult(roads=df)

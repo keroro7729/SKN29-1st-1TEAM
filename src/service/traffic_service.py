@@ -14,6 +14,7 @@ from datetime import date, datetime, time, timedelta
 import pandas as pd
 
 from db.db_client import Client
+from db.queries import traffic as q_traffic
 
 
 def _to_dt_range(start: date, end: date) -> tuple[datetime, datetime]:
@@ -25,12 +26,7 @@ def _to_dt_range(start: date, end: date) -> tuple[datetime, datetime]:
 def list_road_names() -> list[str]:
     """사이드바 도로명 필터용 전체 도로명 목록."""
     client = Client()
-    query = """
-        SELECT road_name
-        FROM pp_road
-        ORDER BY road_name
-    """
-    cols, rows = client.select(query)
+    cols, rows = client.select(q_traffic.list_road_names())
     if not rows:
         return []
     df = pd.DataFrame(rows, columns=cols)
@@ -50,27 +46,8 @@ def get_dow_hour_pattern(
     start_dt, end_exclusive = _to_dt_range(start, end)
     client = Client()
 
-    query = """
-        SELECT
-            DAYOFWEEK(t.datetime) AS dow,
-            HOUR(t.datetime) AS hour,
-            AVG(t.volume) AS avg_volume,
-            AVG(s.speed) AS avg_speed_kmh,
-            COUNT(*) AS samples
-        FROM PP_traffic t
-        JOIN pp_road r
-          ON r.road_id = t.road_id
-        LEFT JOIN pp_speed s
-          ON s.road_id = t.road_id
-         AND s.direction = t.direction
-         AND s.datetime = t.datetime
-        WHERE t.datetime >= %s
-          AND t.datetime < %s
-          AND (%s = '전체' OR r.road_name = %s)
-        GROUP BY dow, hour
-        ORDER BY dow, hour
-    """
-    params = (start_dt, end_exclusive, road_name, road_name)
+    query = q_traffic.dow_hour_pattern()
+    params = q_traffic.dow_hour_pattern_params(start_dt=start_dt, end_exclusive=end_exclusive, road_name=road_name)
     cols, rows = client.select(query, params)
     df = pd.DataFrame(rows, columns=cols)
 

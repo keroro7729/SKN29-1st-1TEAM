@@ -2,7 +2,9 @@
 
 > 🔵 데이터로 교통을 이해하고, 🔴 문제를 발견하며, 🟢 개선 방향을 제시한다
 
+
 ---
+
 
 ## 🦸 Hero
 
@@ -12,7 +14,9 @@
 **교통 패턴, 사고 요인, 공항 유입 흐름, 운전자 스트레스 지수**를 분석하여  
 👉 **개선이 필요한 도로와 정책 인사이트 도출**
 
+
 ---
+
 
 ## 🖼 Visualization Preview
 
@@ -30,7 +34,9 @@
 ### 📍 스트레스 지수
 ![stress](./assets/stress.png)
 
+
 ---
+
 
 ## 📊 Key Signals
 
@@ -41,7 +47,9 @@
 - ✈️ **공항 이동 → 특정 도로 집중**
 - 😡 **고스트레스 도로 존재 → 개선 필요**
 
+
 ---
+
 
 ## 🌐 Project Route
 
@@ -54,7 +62,9 @@
 | ✈️ 공항 흐름 | 유입 경로 분석 |
 | 😡 스트레스 | 도로 위험도 평가 |
 
+
 ---
+
 
 ## 🗂 Data Route
 
@@ -69,7 +79,9 @@
 - 📌 **Feature**  
   → 시간 / 요일 / 날씨 / 교통량 / 사고
 
+
 ---
+
 
 ## 🧩 ERD 구조도
 
@@ -77,7 +89,9 @@
 
 ![ERD](./assets/erd.png)
 
+
 ---
+
 
 ## 🛠 Tech Stack
 
@@ -97,7 +111,9 @@
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
+
 ---
+
 
 ## 👥 Team Route
 
@@ -110,7 +126,9 @@
 | 진욱 | ✈️ 분석 | 공항 흐름 |
 | 은진 | 😡 분석 | 스트레스 지수 |
 
+
 ---
+
 
 ## 👤 팀원 소개 / 역할
 
@@ -132,7 +150,9 @@
 - 스트레스 지수 설계
 - 개선 도로 도출
 
+
 ---
+
 
 ## ⚡ Quick Start
 

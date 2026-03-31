@@ -7,6 +7,7 @@ from datetime import date, timedelta
 import streamlit as st
 
 from ui.incheon_spot_page import render_incheon_spot_page
+from ui.faq import render_faq_page
 from ui.overview_page import render_overview_page
 from ui.road_stress_page import render_road_stress_page
 from ui.traffic_trend_page import render_traffic_trend_page
@@ -17,6 +18,7 @@ PAGE_LABELS = [
     "시간대 교통 패턴",
     "도로 스트레스 지수",
     "인천 사고·화물 다발",
+    "FAQ",
 ]
 
 
@@ -79,6 +81,7 @@ def main():
         "시간대 교통 패턴": render_traffic_trend_page,
         "도로 스트레스 지수": render_road_stress_page,
         "인천 사고·화물 다발": render_incheon_spot_page,
+        "FAQ": render_faq_page,
     }
     routes[page](start, end, road_name)
 

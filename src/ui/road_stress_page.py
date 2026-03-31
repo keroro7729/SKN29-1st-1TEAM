@@ -19,6 +19,7 @@ def render_road_stress_page(start, end, road_name: str) -> None:
         "통행량이 몰릴 때 속도 하락, 속도 편차, 출퇴근 집중, 피크 반복성(피크 집중도) 등을 종합해 "
         "개선 우선순위(Top N)를 보여줍니다."
     )
+    st.info(f"선택 기간: **{start} ~ {end}** · 도로: **{road_name}**")
 
     top_n = st.slider("Top N", min_value=5, max_value=50, value=15, step=5)
 
@@ -32,8 +33,6 @@ def render_road_stress_page(start, end, road_name: str) -> None:
     if df is None or df.empty:
         st.info("표시할 데이터가 없습니다. 기간이나 도로를 바꿔 보세요.")
         return
-
-    st.caption(f"선택 기간 {start} ~ {end} · 도로 {road_name}")
 
     # 전체 랭킹
     show_df = df.head(top_n).copy()

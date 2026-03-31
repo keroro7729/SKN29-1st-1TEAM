@@ -16,6 +16,7 @@ def _cached_dow_hour_pattern(start, end, road_name: str):
 def render_traffic_trend_page(start, end, road_name: str) -> None:
     st.subheader("시간대 교통 패턴")
     st.caption("요일별·시간대별 교통량/속도 패턴")
+    st.info(f"선택 기간: **{start} ~ {end}** · 도로: **{road_name}**")
 
     try:
         pattern = _cached_dow_hour_pattern(start, end, road_name)
@@ -26,8 +27,6 @@ def render_traffic_trend_page(start, end, road_name: str) -> None:
     if pattern is None or pattern.empty:
         st.warning("선택 기간·도로에 맞는 데이터가 없습니다.")
         return
-
-    st.caption(f"선택 기간 {start} ~ {end} · 도로 {road_name}")
 
     # 요일별 요약
     by_dow = (
